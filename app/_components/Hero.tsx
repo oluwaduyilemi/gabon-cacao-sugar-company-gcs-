@@ -1,0 +1,69 @@
+
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "@/app/component/lib/animations";
+
+export default function Hero() {
+  return (
+    <section className="relative h-screen w-full flex items-center overflow-hidden bg-black">
+      <motion.div 
+        initial={{ scale: 1.15 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 3, ease: "easeOut" }}
+        className="absolute inset-0 z-0"
+      >
+        <Image
+          src="/images/hero-cocoa-D8nT2eaj.jpg" 
+          alt="Cacao Plantation"
+          fill
+          priority
+          className="object-cover opacity-60" 
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent" />
+      </motion.div>
+
+      <div className="container relative z-10 mx-auto px-6 md:px-12">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+          className="max-w-4xl"
+        >
+          <motion.h1 
+            variants={fadeInUp}
+            className="text-5xl md:text-6xl pt-15 font-serif font-bold text-white leading-tight"
+          >
+            Premium Cocoa <br />
+            <span className="text-[#D4A017]">
+              Structured for Global Trade
+            </span>
+          </motion.h1>
+
+          <motion.p 
+            variants={fadeInUp}
+            className="mt-6 text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl"
+          >
+            Gabon Cacao & Sugar Company structures, sources, and executes 
+            compliant cocoa trade flows connecting verified West African 
+            producers with qualified global buyers.
+          </motion.p>
+
+          <motion.div 
+            variants={fadeInUp} 
+            className="mt-10 flex flex-wrap gap-4"
+          >
+            <button className="px-8 py-2 bg-[#D4A017] hover:bg-[#B8860B] text-black font-bold rounded-sm transition-all duration-300">
+              Request Trade Inquiry
+            </button>
+            <button className="px-8 py-2 bg-white/5 hover:bg-white/10 text-white font-semibold backdrop-blur-md border border-white/20 rounded-sm transition-all duration-300">
+              Explore Our Commodities
+            </button>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
