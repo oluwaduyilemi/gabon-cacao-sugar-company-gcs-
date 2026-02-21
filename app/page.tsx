@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./_components/Hero";
 import Mission from "./_components/Mission";
 import Commodities from "./_components/Commodities";

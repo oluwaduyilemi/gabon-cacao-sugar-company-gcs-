@@ -1,20 +1,21 @@
+
+"use client";
+
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1F3A] text-gray-300 pt-20 pb-10">
+    <footer className="bg-[#3C2A21] text-gray-300 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-          {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold text-[#D4AF37] mb-4">
               GCS
             </h3>
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-gray-400">
               Gabon Cacao & Sugar Company — bridging African producers with
               international buyers through sustainable sourcing and
               compliance-driven trade.
@@ -23,47 +24,37 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-lg">
+            <h4 className="text-white font-semibold mb-6 text-lg">
               Quick Links
             </h4>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/" className="hover:text-[#D4AF37] transition">Home</Link></li>
-              <li><Link href="/about" className="hover:text-[#D4AF37] transition">About</Link></li>
-              <li><Link href="/commodities/cocoa" className="hover:text-[#D4AF37] transition">Commodities</Link></li>
-              <li><Link href="/services" className="hover:text-[#D4AF37] transition">Services</Link></li>
-              <li><Link href="/sustainability" className="hover:text-[#D4AF37] transition">Sustainability</Link></li>
-              <li><Link href="/news" className="hover:text-[#D4AF37] transition">News</Link></li>
-              <li><Link href="/contact" className="hover:text-[#D4AF37] transition">Contact</Link></li>
+            <ul className="space-y-4 text-sm">
+              <li><Link href="/" className="hover:text-[#D4AF37] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#D4AF37] transition-colors">About</Link></li>
+              <li><Link href="/services" className="hover:text-[#D4AF37] transition-colors">Services</Link></li>
+              <li><Link href="/career" className="hover:text-[#D4AF37] transition-colors">Careers</Link></li>
+              <li><Link href="/sustainability" className="hover:text-[#D4AF37] transition-colors">Sustainability</Link></li>
+              <li><Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Commodities (Only Cocoa for now) */}
+          {/* Commodities */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-lg">
+            <h4 className="text-white font-semibold mb-6 text-lg">
               Commodities
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-4 text-sm">
               <li>
-                <Link
-                  href="/commodities/cocoa"
-                  className="hover:text-[#D4AF37] transition"
-                >
+                <Link href="/commodities/cocoa" className="hover:text-[#D4AF37] transition-colors">
                   Cocoa
                 </Link>
               </li>
-                <li>
-                <Link
-                  href="/commodities/cocoa"
-                  className="hover:text-[#D4AF37] transition"
-                >
-                  Cashew
+              <li>
+                <Link href="/commodities/sugar" className="hover:text-[#D4AF37] transition-colors">
+                Cashew
                 </Link>
               </li>
-                <li>
-                <Link
-                  href="/commodities/cocoa"
-                  className="hover:text-[#D4AF37] transition"
-                >
+              <li>
+                <Link href="/commodities/timber" className="hover:text-[#D4AF37] transition-colors">
                   Timber
                 </Link>
               </li>
@@ -72,24 +63,24 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-lg">
+            <h4 className="text-white font-semibold mb-6 text-lg">
               Contact
             </h4>
 
-            <div className="space-y-4 text-sm">
-              <div className="flex items-start gap-3">
-                <Mail size={18} className="text-[#D4AF37] mt-1" />
+            <div className="space-y-5 text-sm">
+              <div className="flex items-start gap-3 group">
+                <Mail size={18} className="text-[#D4AF37] mt-1 shrink-0" />
                 <a
                   href="mailto:sales@gaboncs-co.com"
-                  className="hover:text-[#D4AF37] transition"
+                  className="hover:text-[#D4AF37] transition-colors"
                 >
                   sales@gaboncs-co.com
                 </a>
               </div>
 
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-[#D4AF37] mt-1" />
-                <p>
+                <MapPin size={18} className="text-[#D4AF37] mt-1 shrink-0" />
+                <p className="leading-relaxed">
                   Immeuble Dumez BP2326<br />
                   Libreville, Gabon
                 </p>
@@ -99,16 +90,16 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-700 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
           <p>
             © {new Date().getFullYear()} Gabon Cacao & Sugar Company. All rights reserved.
           </p>
 
-          <div className="flex gap-6">
-            <Link href="/privacy-policy" className="hover:text-[#D4AF37] transition">
+          <div className="flex gap-8">
+            <Link href="/privacy-policy" className="hover:text-[#D4AF37] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="hover:text-[#D4AF37] transition">
+            <Link href="/terms-of-service" className="hover:text-[#D4AF37] transition-colors">
               Terms of Service
             </Link>
           </div>
