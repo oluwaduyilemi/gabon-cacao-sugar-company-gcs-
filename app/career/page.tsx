@@ -4,7 +4,7 @@ import CareerValues from "../_components/CareerValues";
 
 
 
-export default function About() {
+export default function career() {
   return (
       <main className="bg-white pt-15">
         <CareerHero/>

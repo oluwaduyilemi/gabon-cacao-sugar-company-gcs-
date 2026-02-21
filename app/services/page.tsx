@@ -3,7 +3,7 @@ import ServiceHero from "../_components/ServiceHero";
 import ServicePartnership from "../_components/ServicePartnership";
 
 
-export default function About() {
+export default function service() {
   return (
       <main className="bg-white pt-15">
        <ServiceHero/>
