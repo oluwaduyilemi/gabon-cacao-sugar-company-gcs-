@@ -1,8 +1,13 @@
 "use client";
+
+import NewsContent from "../_components/NewsContent";
+import NewsHero from "../_components/NewsHero";
+
 export default function News() {
   return (
       <main className="bg-white pt-15 pb-10">
-        <h1>welcome to News page</h1>
+        <NewsHero/>
+        <NewsContent/>
       </main>
   );
 }

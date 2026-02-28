@@ -22,7 +22,7 @@ export default function Navbar() {
   const commodityLinks = [
     { name: "Cocoa", href: "/commodities/cocoa" },
     { name: "Cashew", href: "/commodities/cashew" },
-    { name: "Timber", href: "/commodities/timber" },
+    { name: "Timber", href: "/commodities/timber" }, 
   ];
 
   return (
@@ -47,7 +47,7 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Menu - Adjusted Spacing (space-x-10) */}
+          {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-8 text-[13px] uppercase tracking-wider font-semibold text-white/90">
             <Link href="/" className="hover:text-[#D4AF37] transition-colors">
               Home
@@ -57,13 +57,13 @@ export default function Navbar() {
               About
             </Link>
 
-            {/* Dropdown */}
+            {/* Dropdown Container */}
             <div
-              className="relative"
+              className="relative py-4" // Added padding here to act as a hover bridge
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className="flex items-center gap-1.5 hover:text-[#D4AF37] transition-colors outline-none">
+              <button className="flex items-center gap-1.5 hover:text-[#D4AF37] transition-colors outline-none cursor-default">
                 Commodities
                 <ChevronDown
                   size={14}
@@ -73,19 +73,23 @@ export default function Navbar() {
                 />
               </button>
 
+              {/* Dropdown Menu */}
               <div
-                className={`absolute left-0 mt-4 w-52 bg-white text-gray-800 rounded-lg shadow-2xl transition-all duration-300 origin-top border-t-4 border-[#D4AF37] ${
+                className={`absolute left-0 w-52 bg-white text-gray-800 rounded-lg shadow-2xl transition-all duration-300 origin-top border-t-4 border-[#D4AF37] ${
                   isDropdownOpen
-                    ? "opacity-100 scale-100 translate-y-0"
-                    : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                    ? "opacity-100 scale-100 translate-y-2"
+                    : "opacity-0 scale-95 translate-y-0 pointer-events-none"
                 }`}
               >
+                {/* INVISIBLE BRIDGE: This 20px gap filler ensures the menu doesn't close */}
+                <div className="absolute -top-6 left-0 w-full h-6 bg-transparent" />
+
                 <div className="py-2">
                   {commodityLinks.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block px-6 py-3 text-sm hover:bg-amber-50 hover:text-[#D4AF37] transition-colors font-medium"
+                      className="block px-6 py-3 text-sm hover:bg-amber-50 hover:text-[#D4AF37] transition-colors font-medium normal-case tracking-normal"
                     >
                       {item.name}
                     </Link>
@@ -165,14 +169,6 @@ export default function Navbar() {
           <Link href="/sustainability" onClick={() => setIsOpen(false)}>Sustainability</Link>
           <Link href="/news" onClick={() => setIsOpen(false)}>News</Link>
           <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-
-          <Link
-            href="/contact"
-            onClick={() => setIsOpen(false)}
-            className="bg-[#D4AF37] text-black px-4 py-4 rounded-lg text-center font-bold uppercase tracking-widest mt-4"
-          >
-            Request Inquiry
-          </Link>
         </div>
       </div>
     </header>
