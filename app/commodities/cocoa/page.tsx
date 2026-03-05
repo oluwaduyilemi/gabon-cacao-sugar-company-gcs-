@@ -36,7 +36,7 @@ export default function CocoaOverview() {
               variants={fadeInUp}
               className="text-6xl md:text-8xl font-serif font-bold text-slate-900 leading-tight"
             >
-              Cashew
+              Cocoa
             </motion.h1>
       </motion.div>
         </div>
