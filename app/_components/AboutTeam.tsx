@@ -14,7 +14,7 @@ const team = [
   },
   {
     name: "William BRUCE-VANDERPUYE",
-    role: "Managing Director",
+    role: "Chief Operating Manager",
     bio: "Experienced commodity professional driving operational excellence across African and international markets.",
     image: "/images/director.jpg",
   },

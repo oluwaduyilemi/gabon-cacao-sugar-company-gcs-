@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link"; 
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/app/component/lib/animations";
 
@@ -22,7 +23,7 @@ export default function Hero() {
           className="object-cover opacity-60" 
           quality={90}
         />
-        <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
       </motion.div>
 
       <div className="container relative z-10 mx-auto px-6 md:px-12">
@@ -55,12 +56,17 @@ export default function Hero() {
             variants={fadeInUp} 
             className="mt-10 flex flex-wrap gap-4"
           >
-            <button className="px-8 py-2 bg-[#D4A017] hover:bg-[#B8860B] text-black font-bold rounded-sm transition-all duration-300">
-              Request Trade Inquiry
-            </button>
-            <button className="px-8 py-2 bg-white/5 hover:bg-white/10 text-white font-semibold backdrop-blur-md border border-white/20 rounded-sm transition-all duration-300">
-              Explore Our Commodities
-            </button>
+            <Link href="/contact">
+              <button className="px-8 py-3 bg-[#D4A017] hover:bg-[#B8860B] text-black font-bold rounded-sm transition-all duration-300">
+                Request Trade Inquiry
+              </button>
+            </Link>
+
+            <Link href="/commodities/cocoa">
+              <button className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-semibold backdrop-blur-md border border-white/20 rounded-sm transition-all duration-300">
+                Explore Our Commodities
+              </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

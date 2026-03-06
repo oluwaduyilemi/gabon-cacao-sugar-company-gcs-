@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link"; 
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/app/component/lib/animations";
 
 export default function CTA() {
   return (
-    <section className="pb-24 pt-10 bg-white">
+    <section className="pb-25 pt-9 bg-white">
       <div className="container mx-auto px-6">
         <motion.div 
           variants={staggerContainer}
@@ -31,11 +32,12 @@ export default function CTA() {
             your commodity needs.
           </motion.p>
 
-          {/* Action Button */}
           <motion.div variants={fadeInUp}>
-            <button className="px-10 py-3 bg-[#0B1221] hover:bg-[#D4A017] text-white hover:text-black font-bold rounded-md transition-all duration-300 shadow-lg hover:shadow-amber-200/50">
-              Request Trade Inquiry
-            </button>
+            <Link href="/contact">
+              <button className="px-10 py-4 bg-[#0B1221] hover:bg-[#D4A017] text-white hover:text-black font-bold rounded-md transition-all duration-300 shadow-lg hover:shadow-amber-200/50 uppercase tracking-widest text-xs">
+                Request Trade Inquiry
+              </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

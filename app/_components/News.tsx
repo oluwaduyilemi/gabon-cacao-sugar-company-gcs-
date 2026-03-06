@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -8,7 +9,7 @@ import { fadeInUp, staggerContainer } from "@/app/component/lib/animations";
 const newsItems = [
   {
     date: "Feb 2025",
-    title: "GCS at Chocoa 2025",
+    title: "GCS at Chocoa 2025 & 2026",
     excerpt: "GCS participated in the world's leading cocoa conference, presenting sustainable sourcing initiatives.",
     slug: "gcs-at-chocoa-2025",
   },
@@ -28,7 +29,7 @@ const newsItems = [
 
 export default function News() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div 
@@ -36,17 +37,28 @@ export default function News() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerContainer}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
         >
-          <motion.span variants={fadeInUp} className="text-[#D4A017] font-bold tracking-[0.2em] text-sm uppercase">
-            News & Impact
-          </motion.span>
-          <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mt-4 mb-6">
-            Latest From GCS
-          </motion.h2>
+          <div className="max-w-2xl">
+            <motion.span variants={fadeInUp} className="text-[#D4A017] font-bold tracking-[0.2em] text-xs uppercase block mb-4">
+              News & Impact
+            </motion.span>
+            <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-serif font-bold text-slate-900 tracking-tight">
+              Latest From GCS
+            </motion.h2>
+          </div>
+          
+          <motion.div variants={fadeInUp}>
+            <Link 
+              href="/news" 
+              className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-slate-900 hover:text-[#D4A017] transition-colors"
+            >
+              View All News 
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
         </motion.div>
 
-        {/* News Grid */}
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
@@ -63,24 +75,24 @@ export default function News() {
               <span className="text-[#D4A017] font-semibold text-sm mb-4">
                 {article.date}
               </span>
-              <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4 group-hover:text-[#D4A017] transition-colors">
+              <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4 group-hover:text-[#D4A017] transition-colors leading-snug">
                 {article.title}
               </h3>
-              <p className="text-gray-500 leading-relaxed mb-8 flex-grow">
+              <p className="text-gray-500 leading-relaxed mb-8 flex-grow text-sm">
                 {article.excerpt}
               </p>
               
               <Link 
-                href={`/news/${article.slug}`}
-                className="inline-flex items-center text-[#D4A017] font-bold group/link"
+                href="/news" 
+                className="inline-flex items-center text-[#D4A017] text-xs uppercase tracking-widest font-bold group/link"
               >
                 Read more
                 <motion.span
-                  initial={{ x: 0 }}
-                  whileHover={{ x: 5 }}
                   className="ml-2"
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                 >
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </motion.span>
               </Link>
             </motion.div>
