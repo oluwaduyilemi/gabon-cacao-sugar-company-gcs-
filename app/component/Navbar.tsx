@@ -61,7 +61,7 @@ export default function Navbar() {
 
             {/* Dropdown Container */}
             <div
-              className="relative py-4" // Added padding here to act as a hover bridge
+              className="relative py-4" 
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
@@ -83,7 +83,6 @@ export default function Navbar() {
                     : "opacity-0 scale-95 translate-y-0 pointer-events-none"
                 }`}
               >
-                {/* INVISIBLE BRIDGE: This 20px gap filler ensures the menu doesn't close */}
                 <div className="absolute -top-6 left-0 w-full h-6 bg-transparent" />
 
                 <div className="py-2">
@@ -174,6 +173,7 @@ export default function Navbar() {
           <Link href="/career" onClick={() => setIsOpen(false)}>Careers</Link>
           <Link href="/sustainability" onClick={() => setIsOpen(false)}>Sustainability</Link>
           <Link href="/news" onClick={() => setIsOpen(false)}>News</Link>
+          <Link href="/team" onClick={() => setIsOpen(false)}>Team</Link>
           <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       </div>

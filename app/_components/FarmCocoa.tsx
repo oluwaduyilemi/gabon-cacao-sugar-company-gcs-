@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function FarmCocoa() {
   const galleryImages = [
-    "/images/farm1.jpg", "/images/farm2.jpg", "/images/farm3.jpg",
-    "/images/farm4.jpg", "/images/farm5.jpg", "/images/farm6.jpg"
+    "/images/farm1.jpeg", "/images/farm2.jpeg", "/images/farm3.jpeg",
+    "/images/farm4.jpeg", "/images/farm5.jpeg", "/images/farm6.jpeg"
   ];
 
   return (
