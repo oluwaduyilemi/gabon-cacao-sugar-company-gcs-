@@ -22,7 +22,7 @@ export default function AboutHero() {
             variants={fadeInUp}
             className="text-5xl font-bold text-slate-900 leading-[1.1] mb-8"
           >
-            Restoring Gabon&#39;s Agricultural <br />
+            Restoring Africa Agricultural <br />
             Legacy Through <span className="text-[#D4A017]">Global Trade</span>
           </motion.h1>
 
@@ -31,7 +31,7 @@ export default function AboutHero() {
             variants={fadeInUp}
             className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto"
           >
-            Founded to restore Gabon&#39;s historic reputation in cocoa and agricultural excellence, 
+            Founded to restore Africa historic reputation in cocoa and agricultural excellence, 
             GCS operates as a vertically integrated soft-commodities brokerage bridging local 
             farmers and global markets.
           </motion.p>

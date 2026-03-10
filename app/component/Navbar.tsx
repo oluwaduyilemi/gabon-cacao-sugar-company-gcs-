@@ -33,22 +33,24 @@ export default function Navbar() {
           : "bg-[#3C2A21]/90 backdrop-blur-md py-4" 
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 px-8">
         <div className="flex justify-between items-center h-16">
 
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
-            <Image
-              src="/images/logo.png"
-              alt="Gabon Cacao & Sugar Company"
-              width={60}
-              height={55}
-              className="object-contain"
-            />
-          </Link>
+     <Link href="/" className="flex items-center shrink-0">
+        <div className="relative w-[140px] h-[70px] md:w-[160px] md:h-[81px]"> 
+          <Image
+            src="/images/logoo.png" 
+            alt="Gabon Cacao & Sugar Company"
+            fill
+            priority
+            className="object-contain brightness-110 contrast-110" 
+            sizes="(max-width: 768px) 140px, 160px"
+          />
+        </div>
+      </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center space-x-8 text-[13px] uppercase tracking-wider font-semibold text-white/90">
+          <nav className="hidden lg:flex items-center space-x-7 text-[13px] uppercase tracking-wider font-semibold text-white/90">
             <Link href="/" className="hover:text-[#D4AF37] transition-colors">
               Home
             </Link>
@@ -112,6 +114,10 @@ export default function Navbar() {
 
             <Link href="/news" className="hover:text-[#D4AF37] transition-colors">
               News
+            </Link>
+
+             <Link href="/team" className="hover:text-[#D4AF37] transition-colors">
+              Team
             </Link>
           </nav>
 
