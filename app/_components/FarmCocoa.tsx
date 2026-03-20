@@ -27,7 +27,7 @@ export default function FarmCocoa() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="relative h-72 rounded-2xl overflow-hidden group shadow-lg"
+                className="relative h-93 md:h-85 rounded-2xl overflow-hidden group shadow-lg"
               >
                 <Image 
                   src={src} 
