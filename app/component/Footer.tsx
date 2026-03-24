@@ -34,6 +34,8 @@ export default function Footer() {
               <li><Link href="/career" className="hover:text-[#D4AF37] transition-colors">Careers</Link></li>
               <li><Link href="/sustainability" className="hover:text-[#D4AF37] transition-colors">Sustainability</Link></li>
               <li><Link href="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link></li>
+              <li><Link href="/team" className="hover:text-[#D4AF37] transition-colors">Team</Link></li>
+
             </ul>
           </div>
 
@@ -56,6 +58,11 @@ export default function Footer() {
               <li>
                 <Link href="/commodities/timber" className="hover:text-[#D4AF37] transition-colors">
                   Timber
+                </Link>
+              </li>
+              <li>
+                <Link href="/commodities/sugar" className="hover:text-[#D4AF37] transition-colors">
+                  Sugar
                 </Link>
               </li>
             </ul>

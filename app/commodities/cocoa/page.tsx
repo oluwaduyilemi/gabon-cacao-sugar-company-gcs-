@@ -38,7 +38,7 @@ export default function CocoaOverview() {
             >
               Cocoa
             </motion.h1>
-      </motion.div>
+          </motion.div>
         </div>
       </section>
       <div className="container mx-auto px-6">

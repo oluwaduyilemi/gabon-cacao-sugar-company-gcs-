@@ -23,6 +23,8 @@ export default function Navbar() {
     { name: "Cocoa", href: "/commodities/cocoa" },
     { name: "Cashew", href: "/commodities/cashew" },
     { name: "Timber", href: "/commodities/timber" }, 
+    { name: "Sugar", href: "/commodities/sugar" }, 
+
   ];
 
   return (
@@ -35,18 +37,6 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 px-8">
         <div className="flex justify-between items-center h-16">
-{/* <Link href="/" className="flex items-center shrink-0">
-  <div className="relative w-[140px] h-[70px] md:w-[160px] md:h-[81px]"> 
-    <Image
-      src="/images/trans.png" 
-      alt="GCS Commodities"
-      fill
-      priority
-      className="object-contain" 
-      sizes="(max-width: 898px) 140px, 160px"
-    />
-  </div>
-</Link> */}
 <Link href="/" className="flex items-center shrink-0">
   <div className="relative w-[140px] h-[70px] md:w-[160px] md:h-[81px]"> 
     <Image
@@ -61,19 +51,6 @@ export default function Navbar() {
 </Link>
     
 {/*       
-<Link href="/" className="flex items-center shrink-0">
-  <div className="logo-container relative w-[160px] h-[81px]"> 
-    <Image
-      src="/images/stesslogo.jpeg" 
-      alt="Gabon Cacao & Sugar Company"
-      fill
-      priority
-      sizes="(max-width: 898px) 140px, 160px"
-    
-      className="mix-blend-screen contrast-130" 
-    />
-  </div>
-</Link> */}
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-7 text-[13px] uppercase tracking-wider font-semibold text-white/90">
