@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CheckCircle2, Link } from "lucide-react";
+import { CheckCircle2,} from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/app/component/lib/animations";
 
 const keyFeatures = [
@@ -91,15 +92,14 @@ export default function SugarPage() {
                 ))}
               </div>
             </div>
-
-            {/* Gold CTA Button from Screenshot */}
-            <div className="pt-6">
-              <Link href="/contact" className="inline-block"> 
-              <button className="bg-[#D4AF37] hover:bg-[#C19F30] text-[#1A1A1A] font-bold py-3 px-10 rounded-xl transition-all duration-300 shadow-lg active:scale-95">
-                Request Supply Quote
-              </button>
-              </Link>
-            </div>
+           {/* Functional CTA Button to Contact Page */}
+              <div className="pt-6">
+                <Link href="/contact" className="inline-block">
+                  <button className="bg-[#B8962F] hover:bg-[#3C2A21] text-white font-bold py-3 px-10 rounded-xl transition-all duration-300 shadow-lg shadow-amber-900/10">
+                    Request Supply Quote
+                  </button>
+                </Link>
+              </div>
           </motion.div>
         </motion.div>
 
