@@ -6,6 +6,7 @@ import Footprint from "./_components/Footprint";
 import News from "./_components/News";
 import CTA from "./_components/CTA";
 import Leadership from "./_components/Leadership";
+import RecentActivitiesTimeline from "./_components/RecentActivitiesTimeline";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Process/>
         <Footprint/>
         <Leadership/>
+        <RecentActivitiesTimeline/>
         <News/>
         <CTA/>
       </main>
