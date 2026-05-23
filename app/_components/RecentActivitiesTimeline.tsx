@@ -5,7 +5,7 @@ import { Landmark, Briefcase, TrendingUp, Calendar } from "lucide-react";
 
 const TIMELINE_DATA = [
   {
-    metaPeriod: "Q1 · 2026",
+    metaPeriod: "Q2 · 2026",
     label: "EXECUTIVE FORUM",
     labelIcon: <Landmark className="w-3.5 h-3.5" />,
     title: "ACFIF 2026 — Africa Cocoa Finance & Investment Forum",
@@ -68,12 +68,10 @@ export default function RecentActivitiesTimeline() {
                 [ {item.metaPeriod} ]
               </div>
 
-              {/* Core Content Body Stack */}
               <div className="space-y-3">
                 
                 {/* Meta Labels Header Line */}
                 <div className="flex flex-wrap items-center gap-3 text-xs font-mono tracking-wider text-[#D4AF37] font-semibold">
-                  {/* Inline Mobile-Only Metadata Indicator */}
                   <span className="md:hidden text-gray-400 bg-gray-200/50 px-2 py-0.5 rounded text-[10px]">
                     {item.metaPeriod}
                   </span>

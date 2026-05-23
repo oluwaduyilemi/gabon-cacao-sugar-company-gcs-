@@ -1,6 +1,7 @@
 "use client";
 
 import CoreValues from "../_components/CoreValues";
+import ExecutiveBio from "../_components/ExecutiveBio";
 import FieldOperations from "../_components/FieldOperations";
 import JoinTeam from "../_components/JoinTeam";
 import TeamHero from "../_components/TeamHero";
@@ -12,6 +13,7 @@ export default function Team() {
       <main className="bg-white pt-15">
         <TeamHero />
         <CoreValues />
+        <ExecutiveBio/>
         <VideoGallery/>
         <FieldOperations/>
         <JoinTeam />

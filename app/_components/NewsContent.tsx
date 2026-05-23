@@ -16,7 +16,6 @@ export default function NewsContent() {
           viewport={{ once: true }}
           className="space-y-12"
         >
-          {/* 1. EVENTS - THE DOUBLE IMAGE BLOCK */}
           <motion.div variants={fadeInUp} className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
             <div className="flex items-center gap-2 mb-6">
               <span className="bg-[#D4AF37] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Events</span>
